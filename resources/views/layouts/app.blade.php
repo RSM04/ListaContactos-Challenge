@@ -207,7 +207,7 @@
                     buttons: [
                         {
                             text: "Añadir",
-                            "class": "btn btn-primary mb-0",
+                            "class": "enviarr btn btn-primary mb-0",
                             click: function () {$.get(
                                     '/contacts/'+$('#name').val()+'/'+$('#surname').val()+'/'+$('#email').val(),(data)=>{
                                     $('#tabladecontactos').html(data)
@@ -242,7 +242,7 @@
                             </fieldset>
                         </form>`);
                 $("#dialog-add").dialog("open");
-                    $('#enviar').on('click',()=>{
+                    $('[id*="enviar"]').on('click',()=>{
                         $.ajax({
                                 url:'/contacts/'+$('#name').val()+'/'+$('#surname').val()+'/'+$('#email').val(),
                             },(data)=>{

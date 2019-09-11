@@ -18,7 +18,7 @@ class CreatecontactlistTable extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('email');
-            $table->string('categories')->default('0,1');
+            $table->string('categories')->default('Categoria 0,Categoria 1');
             $table->timestamps();
         });
     }
