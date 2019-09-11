@@ -15,25 +15,37 @@ class ContactListSeeder extends Seeder
             'name' => 'Renato',
             'surname' => 'Montaño',
             'email' => "renatogp13@gmail.com",
-            'categories' => '1,2'
+            'categories' => 'Categoria 1, Categoria 2'
         ]);
         DB::table('contactlist')->insert([
             'name' => 'Daniel',
             'surname' => 'Gomez',
             'email' => "danielgomez@gmail.com",
-            'categories' => '2,3'
+            'categories' => 'Categoria 2, Categoria 3'
         ]);
         DB::table('contactlist')->insert([
             'name' => 'Sergio',
             'surname' => 'Piedra',
             'email' => "sergiopiedra@gmail.com",
-            'categories' => '3,4'
+            'categories' => 'Categoria 3, Categoria 4'
         ]);
         DB::table('contactlist')->insert([
             'name' => 'Wilson',
             'surname' => 'Babolat',
             'email' => "wilsonbabolat@gmail.com",
-            'categories' => '1,4'
+            'categories' => 'Categoria 1, Categoria 4'
+        ]);
+        DB::table('contactlist')->insert([
+            'name' => 'Makamune',
+            'surname' => 'Rabute',
+            'email' => "Makamune@gmail.com",
+            'categories' => 'Categoria 2, Categoria 4'
+        ]);
+        DB::table('contactlist')->insert([
+            'name' => 'Angel',
+            'surname' => 'Hernandez',
+            'email' => "angelhernandez@gmail.com",
+            'categories' => 'Categoria 3, Categoria 2'
         ]);
     }
 }

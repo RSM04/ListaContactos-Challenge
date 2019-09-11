@@ -1,4 +1,4 @@
-<table class="table" id="tablacontactos">
+<table class="table col-md-12" id="tablacontactos">
         <thead class="black white-text">
         <tr>
             <th scope="col">Nombre</th>
@@ -15,8 +15,7 @@
                 <td>{{$contacto->surname}}</td>
                 <td>{{$contacto->email}}</td>
                 <td>{{$contacto->categories}}</td>
-                <td><button type="button" contact="{{$contacto->id}}" class="btn btn-info" id="edit{{$loop->index}}">Edit</button> <button contacto="{{$contacto->id}}" class="btn btn-danger pop" data-toggle="popover" data-placement="bottom"
-                                                                                                                                      data-content="">Eliminar</button>
+                <td><button type="button" contact="{{$contacto->id}}" class="btn btn-info" data-toggle="modal" data-target="#modalPoll-1" id="edit{{$contacto->id}}">Edit</button> <button id="eliminar{{$contacto->id}}" contacto="{{$contacto->id}}" class="btn btn-danger pop">Eliminar</button>
                 </td>
             </tr>
         @empty
@@ -24,7 +23,17 @@
         @endforelse
         </tbody>
     </table>
-<div id="dialog">
+<!-- Modal: modalPoll -->
+<div class="row">
+    @if($paginastotales<2)
+        @else
+        @for($i = 0;$i<$paginastotales;$i++)
+            <div class="col-md-2">
+                <button type="button" class="btn btn-info loadmore">{{$i}}</button>
+            </div>
+            @endfor
+        @endif
 </div>
+
 
 
