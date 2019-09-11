@@ -161,13 +161,13 @@
                         let añadir = data.find(function(elemento){
                             return elemento == categoria
                         })
-                        console.log(añadir)
-                        // if(){
-                        //     console.log("hola")
-                        //     $.get('/categoria/add/'+categoria,(data)=>{
-                        //         console.log(data)
-                        //     });
-                        // }
+                        if(añadir == undefined){
+                            console.log('añadiendo')
+                            console.log(categoria)
+                            $.get('/categoria/add/'+categoria,(data)=>{
+                                console.log(data)
+                            });
+                        }
                        })
                    })
 
