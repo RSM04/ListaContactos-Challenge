@@ -6,6 +6,6 @@ To make run project follow those steps:
 ### 2. Create .env file(copy .env.example) and on DB_DATABASE="YourDB", create manually DB
 ### 3. composer install
 ### 4. php artisan migrate:refresh --seed (this runs migrations and seeders)
-### 5. php artisan serve (serve project)
-
+### 5. php artisan key:generate (Creates key for crsf)
+### 6. php artisan serve (serve project)
 
